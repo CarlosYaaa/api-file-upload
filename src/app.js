@@ -12,4 +12,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+
+app.use('/upload', Routes.UploadRoutes);
+
 module.exports = app;
