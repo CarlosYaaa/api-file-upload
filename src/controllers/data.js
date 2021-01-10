@@ -16,10 +16,8 @@ async function ExcelToJson(req, res) {
                 content: item.Contenido,
                 unitOfMeasurement: item["Unidad de medida"],
                 maxQuantityPerOrder: item["Cantidad máxima"],
-                category: {
-                    _id: diccionarioCategorias[categoria],
-                    name: categoria,
-                },
+                category: diccionarioCategorias[categoria],
+                CategoryName: categoria,
                 price: item.Precio,
                 highlight: item["Destacar"] === 'SI'? true:false
             }
