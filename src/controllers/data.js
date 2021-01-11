@@ -4,7 +4,6 @@ const { diccionarioCategorias } = require('./diccionario');
 
 async function ExcelToJson(req, res) {
     const fileName = req.file.filename;
-    // "5fd6c0711d3938ee48b62ad4"
     const categoryMarketId = req.params.categoryMarketId
     try{
         const excel = XLSX.readFile(req.file.path);
